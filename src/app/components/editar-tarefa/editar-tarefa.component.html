@@ -1,0 +1,35 @@
+<p>editar-tarefa works!</p>
+<p>add-tarefa works!</p>
+<form *ngIf="!notFound; else notFound" [formGroup]="form" (ngSubmit)="onSubmit()" class="container my-5">
+  <h3>Editar tarefa</h3>
+  <hr>
+  <div class="mb-3">
+    <label for="titulo" class="form-label">Título</label>
+    <input type="text"
+    formControlName="titulo"
+    class="form-control"
+    id="titulo"
+    >
+  </div>
+  <div class="mb-3">
+    <label for="descricao" class="form-label">Descrição</label>
+    <input type="text"
+    formControlName="descricao"
+    class="form-control"
+    id="descricao"
+    >
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox"
+    formControlName="concluida"
+    class="form-check-input"
+    id="concluida"
+    >
+    <label for="concluida" class="form-check-label">Concluida?</label>
+  </div>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Editar</button>
+</form>
+
+<ng-template #notFoundContainer>
+  <h5>Tarefa não encontrada!</h5>
+</ng-template>

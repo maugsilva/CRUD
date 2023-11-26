@@ -1,0 +1,18 @@
+<a routerlink="/tarefas/nova" class="btn btn-primary mb-1">Nova Tarefa</a>
+<div *ngFor="let tarefa of tarefas" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ tarefa.titulo }}</h5>
+    <p class="card-text">
+      {{ tarefa.descricao }}
+    </p>
+    <span *ngIf="tarefa.concluida" class="badge bg-success">
+      &check; Tarefa concluida</span
+      >
+      <span *ngIf="tarefa.concluida" class="badge bg-warning">
+        &CircleDot; Tarefa pendente</span
+        >
+      <hr />
+      <a routerlink="/tarefas/editar/{{tarefa.id}}" class="btn btn-primary btn-sm me-1">Editar tarefa</a>
+      <button class="btn btn-danger btn-sm" (click)="deletarTarefa(tarefa.id!)">Apagar tarefa</button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "titulo": "Sair em viagem",
+      "descricao": "Sair numa sexta à noite",
+      "concluida": false
+    },
+    {
+      "id": 2,
+      "titulo": "Ir ao supermercado no domingo às 14h00",
+      "descricao": "Fazer a compra do mês",
+      "concluida": false
+    }
+  ]
+}
